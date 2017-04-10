@@ -27,7 +27,7 @@ export default class Appointments extends React.Component {
         type: "GET",
         url: 'http://localhost:3001/appointments',
         dataType: "JSON",
-        headers: JSON.parse(sessionStorage.user)
+        headers: JSON.parse(sessionStorage.getItem('user'))
       }).done((data) => {
         this.setState({appointments: data});
       });

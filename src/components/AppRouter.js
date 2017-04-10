@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Appointments from './Appointments';
 import Appointment from './Appointment';
-import { AppHeader } from './AppHeader';
+import AppHeader from './AppHeader';
 import AppointmentForm from './AppointmentForm';
 import Login from './Login';
 

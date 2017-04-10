@@ -38,7 +38,7 @@ export default class AppointmentForm extends React.Component {
         type: "GET",
         url: `http://localhost:3001/appointments/${this.props.match.params.id}`,
         dataType: "JSON",
-        headers: JSON.parse(sessionStorage.user)
+        headers: JSON.parse(sessionStorage.getItem('user'))
       }).done((data) => {
         this.setState({
                         title: {value: data.title, valid: true},
@@ -100,7 +100,7 @@ export default class AppointmentForm extends React.Component {
       type: "PATCH",
       url: `http://localhost:3001/appointments/${this.props.match.params.id}`,
       data: {appointment: appointment},
-      headers: JSON.parse(sessionStorage.user)
+      headers: JSON.parse(sessionStorage.getItem('user'))
     })
     .done((data) => {
       console.log('appointment updated!');
@@ -119,7 +119,7 @@ export default class AppointmentForm extends React.Component {
       type: 'POST',
       url: 'http://localhost:3001/appointments',
       data: {appointment: appointment},
-      headers: JSON.parse(sessionStorage.user)
+      headers: JSON.parse(sessionStorage.getItem('user'))
     })
     .done((data) => {
       this.props.handleNewAppointment(data);
