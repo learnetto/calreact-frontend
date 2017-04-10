@@ -13,6 +13,9 @@
     "react-router-dom": "^4.0.0"
   },
   "devDependencies": {
+    "enzyme": "^2.8.0",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.3",
     "react-scripts": "0.9.5"
   },
   "scripts": {
