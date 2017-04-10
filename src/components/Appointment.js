@@ -24,7 +24,8 @@ export default class Appointment extends React.Component {
       $.ajax({
         type: "GET",
         url: `http://localhost:3001/appointments/${this.props.match.params.id}`,
-        dataType: "JSON"
+        dataType: "JSON",
+        headers: JSON.parse(sessionStorage.user)
       }).done((data) => {
         this.setState({appointment: data});
       });

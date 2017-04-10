@@ -37,7 +37,8 @@ export default class AppointmentForm extends React.Component {
       $.ajax({
         type: "GET",
         url: `http://localhost:3001/appointments/${this.props.match.params.id}`,
-        dataType: "JSON"
+        dataType: "JSON",
+        headers: JSON.parse(sessionStorage.user)
       }).done((data) => {
         this.setState({
                         title: {value: data.title, valid: true},
@@ -98,7 +99,8 @@ export default class AppointmentForm extends React.Component {
     $.ajax({
       type: "PATCH",
       url: `http://localhost:3001/appointments/${this.props.match.params.id}`,
-      data: {appointment: appointment}
+      data: {appointment: appointment},
+      headers: JSON.parse(sessionStorage.user)
     })
     .done((data) => {
       console.log('appointment updated!');
@@ -113,20 +115,20 @@ export default class AppointmentForm extends React.Component {
   addAppointment () {
     const appointment = {title: this.state.title.value,
                          appt_time: this.state.appt_time.value};
-    $.post('http://localhost:3001/appointments',
-            {
-              appointment: appointment,
-              'access-token': 'nCnrSvyA3Dw2u1LN_u8trA',
-              client: '8F959W3E7T8vrQ1KDggICA',
-              uid: 'test4@example.com'})
-          .done((data) => {
-            this.props.handleNewAppointment(data);
-            this.resetFormErrors();
-          })
-          .fail((response) => {
-            this.setState({formErrors: response.responseJSON,
-                            formValid: false});
-          });
+    $.ajax({
+      type: 'POST',
+      url: 'http://localhost:3001/appointments',
+      data: {appointment: appointment},
+      headers: JSON.parse(sessionStorage.user)
+    })
+    .done((data) => {
+      this.props.handleNewAppointment(data);
+      this.resetFormErrors();
+    })
+    .fail((response) => {
+      this.setState({formErrors: response.responseJSON,
+                      formValid: false});
+    });
   }
 
   deleteAppointment = () => {
@@ -175,7 +177,7 @@ export default class AppointmentForm extends React.Component {
             'Update appointment' :
             'Make a new appointment' }
          </h2>
-        <FormErrors formErrors = {this.state.formErrors} />
+        <FormErrors formErrors={this.state.formErrors} />
         <form onSubmit={this.handleFormSubmit}>
           <input name='title' placeholder='Appointment Title'
             value={this.state.title.value}
