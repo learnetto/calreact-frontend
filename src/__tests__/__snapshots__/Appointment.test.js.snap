@@ -1,0 +1,20 @@
+exports[`render renders appointment correctly 1`] = `
+<div
+  className="appointment">
+  <a
+    href="/appointments/1"
+    onClick={[Function]}>
+    <h3>
+      Team standup meeting
+    </h3>
+  </a>
+  <p>
+    April 11 2017, 12:00:00 pm
+  </p>
+  <a
+    href="/appointments/1/edit"
+    onClick={[Function]}>
+    Edit
+  </a>
+</div>
+`;
