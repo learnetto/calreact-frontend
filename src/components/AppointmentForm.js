@@ -135,7 +135,8 @@ export default class AppointmentForm extends React.Component {
     if(confirm("Are you sure you want to delete this appointment?")) {
       $.ajax({
         type: "DELETE",
-        url: `http://localhost:3001/appointments/${this.props.match.params.id}`
+        url: `http://localhost:3001/appointments/${this.props.match.params.id}`,
+        headers: JSON.parse(sessionStorage.getItem('user'))
       })
       .done((data) => {
         this.props.history.push('/');
