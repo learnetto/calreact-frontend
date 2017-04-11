@@ -4,10 +4,12 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "immutability-helper": "^2.1.2",
     "jquery": "^3.2.1",
     "moment": "^2.18.0",
     "react": "^15.4.2",
+    "react-bootstrap": "^0.30.8",
     "react-datetime": "^2.8.8",
     "react-dom": "^15.4.2",
     "react-router-dom": "^4.0.0"
