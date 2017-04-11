@@ -12,20 +12,6 @@ a {
   text-decoration: none;
 }
 
-body {
-  width:500px;
-  margin:auto;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  padding-bottom: 200px;
-}
-
-a {
-  color: darkred;
-  text-decoration: none;
-}
-
 .submit-button {
   background: #CC0000;
   color: #FFFFFF;
