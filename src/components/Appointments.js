@@ -3,7 +3,7 @@ import AppointmentForm from './AppointmentForm';
 import { AppointmentsList } from './AppointmentsList';
 import update from 'immutability-helper';
 import $ from 'jquery';
-
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
 export default class Appointments extends React.Component {
   static propTypes = {
@@ -47,8 +47,13 @@ export default class Appointments extends React.Component {
   render () {
     return (
       <div>
-        <AppointmentForm handleNewAppointment={this.addNewAppointment} />
-        <AppointmentsList appointments={this.state.appointments} />
+        <CSSTransitionGroup
+          transitionName="home"
+          transitionAppear={true}
+          transitionAppearTimeout={500} >
+          <AppointmentForm handleNewAppointment={this.addNewAppointment} />
+          <AppointmentsList appointments={this.state.appointments} />
+        </CSSTransitionGroup>
       </div>
     )
   }
