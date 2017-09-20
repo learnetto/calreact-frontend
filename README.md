@@ -10,24 +10,24 @@ The code for specific modules and lessons are on separate branches as listed bel
 
 ### Module 09 Using React with a Rails API
 
-[Lessons 1 and 2 - Setting up Create React App and porting components from rils](learnetto/calreact-frontend/tree/m9l2-port-components)
+[Lessons 1 and 2 - Setting up Create React App and porting components from Rails](https://github.com/learnetto/calreact-frontend/tree/m9l2-port-components)
 
-[Lesson 3 - API User authentication with devise_token_auth](learnetto/contend/tree/m9l3-login)
+[Lesson 3 - API User authentication with devise_token_auth](https://github.com/learnetto/calreact-frontend/tree/m9l3-login)
 
-[Lesson 4 - Displaying session data and signing out](learnetto/calreact-frontend/tree/m9l4-sign-out)
+[Lesson 4 - Displaying session data and signing out](https://github.com/learnetto/calreact-frontend/tree/m9l4-sign-out)
 
 ### Module 10 Testing React
 
-[Lesson 1 - Testing with Jest](learnetto/calreact-frontend/tree/m10l1-jest)
+[Lesson 1 - Testing with Jest](https://github.com/learnetto/calreact-frontend/tree/m10l1-jest)
 
-[Lesson 2 - Testing with Enzyme](learnetto/calreact-frontend/tree/m10l2-enzyme)
+[Lesson 2 - Testing with Enzyme](https://github.com/learnetto/calreact-frontend/tree/m10l2-enzyme)
 
-[Lesson 3 - Snapshot Testing](learnetto/calreact-frontend/tree/m10l3-snapshot-testing)
+[Lesson 3 - Snapshot Testing](https://github.com/learnetto/calreact-frontend/tree/m10l3-snapshot-testing)
 
-[Lesson 4 - Testing Forms](learnetto/calreact-frontend/tree/m10l4-testing-forms)
+[Lesson 4 - Testing Forms](https://github.com/learnetto/calreact-frontend/tree/m10l4-testing-forms)
 
 ### Module 11 Styling and animations
 
-[Lesson 1 - Using Bootstrap with React](learnetto/calreact-frontend/tree/mtrap)
+[Lesson 1 - Using Bootstrap with React](https://github.com/learnetto/calreact-frontend/tree/m11l1-bootstrap)
 
-[Lesson 2 - CSS Animations and Transitions](learnetto/calreact-frontend/tree/m11l2-transitions)
+[Lesson 2 - CSS Animations and Transitions](https://github.com/learnetto/calreact-frontend/tree/m11l2-transitions)
